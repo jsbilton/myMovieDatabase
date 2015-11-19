@@ -1,14 +1,31 @@
-// Calvin Demo
-// var Backbone = require('backbone');
-// var $ = require('jquery');
-// Backbone.$ = $;
-// var _ = require('underscore');
-// var HeaderView = require('./headerView');
-// var FooterView = require('./footerView');
-// var FormView = require('./formView');
-// var BooksView = require('./collectionView');
-// var BookCollection = require('./collection');
-//
+
+
+var Backbone= require('backbone');
+var $ = require('jquery');
+var HeaderView = require('./headerView');
+var FooterView = require('./footerView');
+var FormView = require('formView');
+var FilmView = require('./imbdCollectionView');
+var FilmCollection = require('./imdbCollection');
+
+  module.exports = Backbone.View.extend({
+    el: "#layoutView", //maybe wrapper and not .filmContent #layoutView
+    initialize: function ({
+
+    })
+
+  });
+
+
+
+
+
+
+
+
+
+
+
 //
 // module.exports = Backbone.View.extend({
 //   el: '#layoutView',

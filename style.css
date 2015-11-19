@@ -1,7 +1,8 @@
 body {
   background: url("http://www.primemag.me/wp-content/uploads/2013/12/ibrbVxLkWXFw3H.jpg");
   background-size: cover;
-  position: fixed; }
+  position: fixed;
+  filter: opacity(20%); }
 
 header h1 {
   color: #fff;

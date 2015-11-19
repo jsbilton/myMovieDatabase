@@ -1,11 +1,28 @@
-//Calvin DEMO 
-// var Backbone = require('backbone');
-// var $ = require('jquery');
-// Backbone.$ = $;
-// var _ = require('underscore');
-// var tmpl = require('./templates');
-// var BookModel = require('./model');
-//
+
+var Backbone = require('backbone');
+var $ = require('jquery');
+Backbone.$ = $;
+var _ = require('underscore');
+var tmpl = require('./templates');
+var BookModel = require('./model');
+
+
+  module.exports = Backbone.View.extend({
+
+  })
+
+events:{
+  'click button': 'submitForm'
+},
+delete: function(event){
+  event.preventDefault();
+
+},
+submitForm: function(event){
+  event.preventDefault();
+  var poster = this.$('#').val();
+
+
 // module.exports = Backbone.View.extend({
 //   className: 'addBook',
 //   model: null, // just here as placeholder, but need a model up on instantiation
