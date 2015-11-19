@@ -7,10 +7,11 @@ module.exports = Backbone.Model.extend({
   idAttribute: '_id',
   defaults: function() {
     return {
-    cover: "http://www.images.hitfix.com/images2/assets/site/poster_default.gif",
-    title: "Untitled",
-    release: "Unknown",
-    plot: "Not applicable"
+      cover: "http://www.images.hitfix.com/images2/assets/site/poster_default.gif",
+      title: "Rocchell, Rocchell: The Musical",
+      director: "Allan Smithee",
+      release: "1992",
+      plot: "It's the story of Rocchell, Rocchell. A young girl's journey from Milan to Minsk."
     };
   },
   initialize: function(){

@@ -8,21 +8,20 @@ var BookModel = require('./model');
 
 
   module.exports = Backbone.View.extend({
+    className: 'addFilm',
+    events:{
+      'submitForm': 'onAddFilm'
+    },
+    initialize: function () {
 
-  })
+    }
 
-events:{
-  'click button': 'submitForm'
-},
-delete: function(event){
-  event.preventDefault();
+    // submitForm: function(event){
+    //   event.preventDefault();
+    //   var poster = this.$('#').val();
+    // },
 
-},
-submitForm: function(event){
-  event.preventDefault();
-  var poster = this.$('#').val();
-
-
+    });
 // module.exports = Backbone.View.extend({
 //   className: 'addBook',
 //   model: null, // just here as placeholder, but need a model up on instantiation

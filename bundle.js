@@ -1,1 +1,1 @@
-console.error("Error: Parsing file /Users/cantops/Desktop/CodeApplications/imdb-clone/layoutView.js: Unexpected token (17:2)");
+console.error("Error: Parsing file /Users/cantops/Desktop/CodeApplications/imdb-clone/layoutView.js: Binding var (15:6)");

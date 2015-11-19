@@ -13,8 +13,8 @@ module.exports = {
     <form class="filmCard" action="index.html" method="post">
       "<input type = 'cover' name = 'cover' placeholder ='cover'>"
       "<input type = 'title' name = 'title' placeholder ='title'>"
-      "<input type = 'release' name = 'release' placeholder ='release'>"
       "<input type = 'director' name = 'director' placeholder ='director'>"
+      "<input type = 'release' name = 'release' placeholder ='release'>"
       "<textarea name = 'plot' placeholder = 'synopsis'></textarea>"
     </form>
 
