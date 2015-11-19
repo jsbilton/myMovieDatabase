@@ -4,54 +4,37 @@ var $ = require('jquery');
 Backbone.$ = $;
 var _ = require('underscore');
 var tmpl = require('./templates');
-var BookModel = require('./model');
+var FilmModel = require('./model');
 
 
   module.exports = Backbone.View.extend({
-    className: 'addFilm',
+    className: 'addFilm', //bootstrap name like col-md-6?
     events:{
-      'submitForm': 'onAddFilm'
+      'click .submit': 'onAddFilm'
     },
     initialize: function () {
+      if (!this.model) {
+        this.model = new FilmModel();
+      }
+    },
+    onAddFilm: function (event) {
+      event.preventDefault();
+      var newFilm = {
+        cover: this.$el.find('input[name="cover"]').val(),
+        title: this.$el.find('input[name="title"]').val(),
+        director:this.$el.find('input[name="director"]').val(),
+        release: this.$el.find('input[name="release"]').val(),
+        plot: this.$el.find('input[name="plot"]').val()
+      };
+      this.model.set(newFilm);
+      this.model.save();
+      this.$el.find('input, textarea').val('');
+    },
+    template:_.template(tmpl.form),
 
-    }
+    render: function () {
+      var markup = this.template(this.model.toJSON());
+      this.$el.html(markup);
+      return this;
 
-    // submitForm: function(event){
-    //   event.preventDefault();
-    //   var poster = this.$('#').val();
-    // },
-
-    });
-// module.exports = Backbone.View.extend({
-//   className: 'addBook',
-//   model: null, // just here as placeholder, but need a model up on instantiation
-//   events: {
-//     'submit form': 'onAddBook'
-//   },
-//   initialize: function () {
-//     if(!this.model) {
-//       this.model = new BookModel();
-//     }
-//   },
-//   onAddBook: function (evt) {
-//     evt.preventDefault();
-//     var newBook = {
-//       title: this.$el.find('input[name="title"]').val(),
-//       author: this.$el.find('input[name="author"]').val(),
-//       cover: this.$el.find('input[name="coverPhoto"]').val(),
-//       description: this.$el.find('textarea[name="description"]').val()
-//     };
-//     this.model.set(newBook);
-//     this.model.save();
-//     this.$el.find('input, textarea').val('');
-//
-//   },
-//   template: _.template(tmpl.form),
-//   render: function () {
-//     var markup = this.template(this.model.toJSON());
-//     this.$el.html(markup);
-//     // in order to call .el off of render we need to return this
-//     // bookViewInstance.render().el - yields all markup and data from model
-//     return this;
-//   }
-// });
+});

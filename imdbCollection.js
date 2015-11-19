@@ -7,7 +7,5 @@ Backbone.$ = $;
 module.exports = Backbone.Collection.extend({
   url: "http://tiny-tiny.herokuapp.com/collections/mymoviedatabase",
   model: MovieModel,
-  // initialize: function(){
-  //
-  // }
+  initialize: function(){}
 });
