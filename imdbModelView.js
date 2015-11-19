@@ -13,7 +13,7 @@ Backbone.$ = $;
 module.exports = Backbone.Collection.extend({
   tagName:'section', //default is a <div>
   className: " ", // #layoutView
-  template: _.template(tmpl.film), //got rid of #myMovieDatabase
+  template: _.template(tmpl.film), //model
   render: function () {
     var markup = this.template(this.model.toJSON));
     this.$el.html(markup); //throws into the element

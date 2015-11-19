@@ -14,6 +14,12 @@ module.exports = Backbone.Model.extend({
       plot: "It's the story of Rocchell, Rocchell. A young girl's journey from Milan to Minsk."
     };
   },
+  delete: function (){
+  event.preventDefault();
+  // this.destroy
+  // this.$el.remove
+  
+},
   initialize: function(){
 
   }
